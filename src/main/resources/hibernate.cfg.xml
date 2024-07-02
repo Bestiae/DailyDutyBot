@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Настройки подключения к базе данных -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/yourdatabase</property>
+        <property name="hibernate.connection.username">username</property>
+        <property name="hibernate.connection.password">password</property>
+
+        <!-- Диалект SQL для PostgreSQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Настройки управления схемой -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Включение логирования -->
+        <property name="show_sql">true</property>
+
+        <!-- Указание классов-сущностей -->
+<!--        <mapping class="com.yourpackage.YourEntity"/>-->
+    </session-factory>
+</hibernate-configuration>
